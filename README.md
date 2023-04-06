@@ -30,3 +30,4 @@ The following packages can been upgraded to the latest version without any break
 - [flutter_local_notifications](flutter_local_notifications.md)
 - [adjust_sdk](adjust_sdk.md)
 - [firebase packages](firebase.md)
+- [moor](moor.md)
