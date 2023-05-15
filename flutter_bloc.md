@@ -35,7 +35,7 @@ Upgrading to v8.1.2 in `flutter-multipliers` will require us to upgrade the `flu
 
   We have used this exception in `test/features/chart/state/chart_setting/chart_setting_cubit_test.dart`.
 
-  ```
+  ``` dart
       test(
           'should emit a [$ChartSettingFailureState] when the service throws '
           'an exception',
@@ -72,7 +72,7 @@ Upgrading to v8.1.2 in `flutter-multipliers` will require us to upgrade the `flu
 
   The above snippet is from the method we are testing. We can see that we are catching the exception and calling `bloc.addError` method which reports error to `bloc.onError`. As per **changelog of bloc v8.0.0**, only uncaught exceptions are rethrown by `bloc.onError`. Since, it is a caught exception, it will not be rethrown and only log the error to the console as we have added log in our `BlocObserver`. So, there will not be any exceptions thrown to test. We can change the test case to the following:
 
-  ```
+  ``` dart
   test(
           'should emit a [$ChartSettingFailureState] when the service throws '
           'an exception',
@@ -89,7 +89,7 @@ Upgrading to v8.1.2 in `flutter-multipliers` will require us to upgrade the `flu
 
   - Warning: The member 'addError' can only be used within instance members of subclasses of 'package:bloc/src/bloc_base.dart'. This is received in the following code snippet.
 
-  ```
+  ``` dart
   blocTest<TickStreamCubit, TickStreamState>(
           'captures exceptions.',
           build: () => TickStreamCubit(),

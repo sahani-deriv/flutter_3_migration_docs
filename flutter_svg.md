@@ -23,7 +23,7 @@ N/A
 
     Code snippet reference:
 
-    ```
+    ``` dart
     WidgetPredicate _widgetPredicate(S localization, String icon) =>
         (Widget widget) =>
             widget is SvgPicture &&

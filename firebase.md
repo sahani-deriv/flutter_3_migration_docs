@@ -2,11 +2,11 @@
 
 ## New version numbers
 
-- `firebase_core`: ^1.16.0 -> ^2.7.1
-- `firebase_crashlytics`: ^2.7.2 -> ^3.0.17
-- `firebase_messaging`: ^11.3.0 -> ^14.3.0
-- `firebase_database`: ^7.2.2 -> ^10.0.16
-- `firebase_app_check`: ^0.0.6+11 -> ^0.1.1+14
+- `firebase_core`: ^1.16.0 -> ^2.12.0
+- `firebase_crashlytics`: ^2.7.2 -> ^3.3.0
+- `firebase_messaging`: ^11.3.0 -> ^14.6.0
+- `firebase_database`: ^7.2.2 -> ^10.2.0
+- `firebase_app_check`: ^0.0.6+11 -> ^0.1.4
 
 ---
 
