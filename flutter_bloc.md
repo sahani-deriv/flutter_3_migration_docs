@@ -27,6 +27,7 @@ Upgrading to v8.1.2 in `flutter-multipliers` will require us to upgrade the `flu
 ## Resolving issues:
 
 - Since `flutter_bloc` v8.0.0, `BlocUnhandledErrorException` has been removed, which results in following error as we have used it in our test cases.
+- Add // ignore: invalid_use_of_protected_member to cubit.addError.
 
   ```
   The name 'BlocUnhandledErrorException' isn't a type, so it can't be used as a type argument.
