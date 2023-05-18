@@ -6,6 +6,7 @@
 - `SchedulerBinding.instance` no need for null check.
 - `Theme.of(context).textTheme.bodyText2` is deprecated. Should use `Theme.of(context).textTheme.bodyMedium` instead.
 - `primary` property on TextButton is deprecated and we should use `foregroundColor` instead.
+- `primary` property on ElevatedButton is deprecated and we should use `backgroundColor` instead.
 - `Bool` parameters must be named and not positional. This is for better readability.
 -  We need to use `const` for widgets that are not dynamic for performance improvements.
 - `window` is deprecated for flutter's upcoming multi-window support. Following changes need to be made: 
@@ -23,6 +24,32 @@
     MediaQueryData.fromWindow(View.of(context));
 
     ```
+- `channel.setMockMethodCallHandler` is deprecated and shouldn't be used: Replace it with `TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler`
+
+    ```
+    //Before:
+    setUp(() {
+        channel.setMockMethodCallHandler((MethodCall methodCall) async {
+          log.add(methodCall);
+      return true;
+       });
+     });
+
+    // after
+    setUp(() {
+         TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      .setMockMethodCallHandler(channel, (MethodCall methodCall) async {
+        log.add(methodCall);
+      return true;
+      });
+  });
+    ```
+
+## Analysis Options
+
+- `implicit-dynamic` is removed.
+- `prefer_equal_for_default_values` is removed.
+
 
 <br>
 
@@ -48,3 +75,5 @@ The following packages can be upgraded to the latest version without any breakin
 - [adjust_sdk](adjust_sdk.md)
 - [firebase packages](firebase.md)
 - [moor](moor.md)
+
+
