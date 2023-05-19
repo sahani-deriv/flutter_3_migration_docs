@@ -1,8 +1,8 @@
 # Upgrading Flutter Multipliers
 
-This document contains the list of changes that need to be made to upgrade the Flutter Multipliers project to the 3.10.1 version of Flutter.
+This document contains the list of changes that need to be made to upgrade the `flutter-multipliers` project to the `3.10.1` version of Flutter.
 
-You may find out about new amazing things in Dart 3.0 that comes with this upgrade [here](dart_3_things.md).
+We also prepared a list of articles/resources that may be helpful to learn about new amazing things in Dart 3.0 that comes with this upgrade [here](dart_3_things.md).
 
 ## Errors and Warnings
 
