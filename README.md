@@ -1,5 +1,9 @@
 # Upgrading Flutter Multipliers
 
+This document contains the list of changes that need to be made to upgrade the Flutter Multipliers project to the 3.10.1 version of Flutter.
+
+You may find out about new amazing things in Dart 3.0 that comes with this upgrade [here](dart_3_things.md).
+
 ## Errors and Warnings
 
 - Import conflict with `lib/core/presentation/widgets/badge.dart` and `material.dart`. We must use `as` prefix to avoid this conflict.
