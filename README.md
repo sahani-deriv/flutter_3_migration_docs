@@ -30,7 +30,7 @@ We also prepared a list of articles/resources that may be helpful to learn about
     ```
 - `channel.setMockMethodCallHandler` is deprecated and shouldn't be used: Replace it with `TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler`
 
-    ```
+    ```dart
     //Before:
     setUp(() {
         channel.setMockMethodCallHandler((MethodCall methodCall) async {
@@ -52,6 +52,20 @@ We also prepared a list of articles/resources that may be helpful to learn about
 ## Analysis Options
 
 - `implicit-dynamic` is removed.
+  ```yaml
+  // Before
+  analyzer:
+    strong-mode:
+      implicit-casts: false
+      implicit-dynamic: false
+
+  // After
+  analyzer:
+    language:
+      strict-casts: true
+      strict-raw-types: true
+  ```
+
 - `prefer_equal_for_default_values` is removed.
 
 

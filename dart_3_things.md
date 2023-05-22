@@ -1,19 +1,6 @@
-# New things in Dart 3
+# New things in Dart 3 
 
-## Class Modifiers
-
-Dart 3.0 introduces us to `Fiveeee` new class modifiers to allow an author to control whether the type allows being implemented, extended, and/or mixed in from outside of the library where it's defined. Check the links below to find out about new modifiers.
-
-- https://medium.com/lost-but-coding/yo-flutter-devs-i-heard-you-like-class-modifiers-135a8406f303
-
-To understand more about the why's about the new class modifiers: 
-- https://github.com/dart-lang/language/blob/main/accepted/future-releases/class-modifiers/feature-specification.md
-
-## Enhanced Enums (Was in Dart 2.17 but wanted to include it here)
-
-Enums are now more powerful than ever. You can now add methods, properties, and constructors to enums. 
-
-- https://medium.com/huawei-developers/flutter-enhanced-enums-the-powerful-feature-of-dart-2-17-new-feature-of-flutter-3-0-8177a926e487
+Following are the new important/interesting things introduced starting from Dart 3.0.
 
 ## Records
 
@@ -66,6 +53,8 @@ UserInfo getUserInfo(Map<String, dynamic> json){
 
 The first approach is not ideal as it relies on the position of values in a list, which can be error-prone and hard to maintain. Similarly, the second approach of creating a separate class for just two values can be overly verbose and unnecessary.With the introduction of `records` in Dart 3, a more concise and safer solution is available.
 
+We can used `named records` to get the same result as above:
+
 ```dart
 
 ({String name, int age}) userInfo(Map<String, dynamic> json) {
@@ -112,9 +101,26 @@ print(getLatLong().lat); // 40.7128
 
 Well, you can do it now with Dart 3.0 and reading the links below will show you much more you can do now.
 
-
-
+- https://dart.dev/language/patterns
 - https://mokshmahajan.hashnode.dev/unlock-the-magic-of-pattern-matching-in-dart-30
 - https://medium.com/@dnkibere/dart-3-records-pattern-matching-sealed-classes-and-more-12a9e3a52447
-- https://dart.dev/language/patterns
 - https://www.youtube.com/watch?v=KhYTFglbF2k
+
+You can get more used it by doing the exercise below: 
+https://codelabs.developers.google.com/codelabs/dart-patterns-records#0
+## Class Modifiers
+
+Dart 3.0 introduces us to `Fiveeee` new class modifiers to allow an author to control whether the type allows being implemented, extended, and/or mixed in from outside of the library where it's defined. Check the links below to find out about new modifiers.
+
+- https://dart.dev/language/class-modifiers
+- https://medium.com/lost-but-coding/yo-flutter-devs-i-heard-you-like-class-modifiers-135a8406f303
+
+To understand more about the `WHY/WHEN_TO USE` about the new class modifiers: 
+- https://github.com/dart-lang/language/blob/main/accepted/future-releases/class-modifiers/feature-specification.md
+
+## Enhanced Enums (Was in Dart 2.17 but wanted to include it here)
+
+Enums are now more powerful than ever. You can now add methods, properties, and constructors to enums. 
+
+- https://medium.com/huawei-developers/flutter-enhanced-enums-the-powerful-feature-of-dart-2-17-new-feature-of-flutter-3-0-8177a926e487
+
