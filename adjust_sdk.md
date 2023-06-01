@@ -16,13 +16,13 @@ N/A
 
 Before upgrading `adjust_sdk`, the following used to be logged in the console for android as `getAppTrackingAuthorizationStatus` is not supported in android.
 
-```
+``` dart
 E/AdjustBridge( 7388): Not implemented method: getAppTrackingAuthorizationStatus
 ```
 
 Upon upgrading the package, we get the following error:
 
-```
+``` dart
 [log] _TypeError (type 'String' is not a subtype of type 'int')
 [log] #0      Adjust.getAppTrackingAuthorizationStatus
 adjust.dart:107
@@ -36,7 +36,7 @@ app.dart:200
 
 We can solve this by catching the TypeError on \_initializeAdjust method in `app.dart` `line 288` as follows:
 
-```
+``` dart
 Future<void> _initializeAdjust() async {
     final AdjustConfig configuration =
         AdjustConfig(adjustDerivGoToken, AdjustEnvironment.production)
