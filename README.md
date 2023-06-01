@@ -71,6 +71,12 @@ We also prepared a list of articles/resources that may be helpful to learn about
 
 <br>
 
+## Deriv Packages
+
+Please update the ref of the deriv-packages, flutter-chart and deriv-api to flutter-version-3.
+
+<br>
+
 ## Non-breaking package updates:
 
 The following packages can be upgraded to the latest version without any breaking changes:
