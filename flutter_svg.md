@@ -36,7 +36,7 @@ N/A
 
 - As per the documentation of `flutter_svg`, `pictureProvider` no longer provides any kind of functionality and `ExactAssetPicture` belonged to `pictureProvider` itself. We can safely remove the line where we used it.
 - replace color with colorFilter in SvgPicture.asset(...)
-```
+```dart
 //before
 SvgPicture.asset(
                 icon,
@@ -47,7 +47,7 @@ SvgPicture.asset(
                 icon,
                 colorFilter: ColorFilter.mode(
                     context.theme.base04Color,
-                    BlendMode.color),
+                    BlendMode.srcIn),
               ),
 
 ```
